@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import logo from './logo.svg';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Navigate } from "react-router-dom";
-import './App.css';
 import { Login } from "./Login";
 import { Register } from "./Register";
 import { Home } from "./Home"
@@ -19,8 +18,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
         </Routes>
-        { currentPage === "login" ? <Login /> : <Home />}
       </Router>
+      { currentPage === "login" ? <Login /> : <Home />}
     </div>
   );
 }

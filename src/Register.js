@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Login } from "./Login";
+import "./App.css";
 
 export const Register = (props) => {
 
@@ -73,6 +75,12 @@ export const Register = (props) => {
         });
     }
 
+    const [goToLogin, setGoToLogin] = React.useState(false);
+
+    if (goToLogin) {
+        return <Login />;
+    }
+
     return (
         <div className="auth-form-container">
             <h1>Join Edu Navi</h1>
@@ -93,7 +101,7 @@ export const Register = (props) => {
             {error.confirmPass && <span className='err'>{error.confirmPass}</span>}
             <button type="submit">Log In</button>
         </form>
-        <button className="link-btn" onClick={() => props.onFormSwitch('login')}>Already have an account? Login here.</button>
+        <button className="link-btn" onClick={() => { setGoToLogin(true); }}>Already have an account? Login here.</button>
     </div>
     )
 }
