@@ -3,9 +3,20 @@ import navilogo from './Assets/NaviLogo.png';
 import usnews from './Assets/USNews.png';
 import qsworld from './Assets/QSworld.png';
 import times from './Assets/Times.png';
+import { ProfileSettings } from './ProfileSettings';
+import { Login } from './Login';
 import "./Home.css";
 
 export const Home = () => {
+    const [goToProfileSettings, setGoToProfileSettings] = React.useState(false)
+    const [goToLogin, setGoToLogin] = React.useState(false)
+
+    if (goToProfileSettings) {
+        return <ProfileSettings />;
+    } else if (goToLogin) {
+        return <Login />;
+    }
+
     return (
     <div className="Home">
     <head>
@@ -91,6 +102,8 @@ export const Home = () => {
                     </div>
                 </section>
             </div>
+            <button className="profile-settings-btn" onClick={() => { setGoToProfileSettings(true); }}>Profile Settings.</button> 
+            <button className="log-out-btn" onClick={() => { setGoToLogin(true); }}>Log Out.</button> 
         </div>
         
     </body>

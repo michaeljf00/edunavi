@@ -99,7 +99,7 @@ export const Register = (props) => {
             <label htmlFor="confirmPass">Confirm Password</label>
             <input value={input.confirmPass} name="confirmPass" onChange={onInputChange} onBlur={validateInput} id="confirmPass" placeholder="********"/>
             {error.confirmPass && <span className='err'>{error.confirmPass}</span>}
-            <button type="submit">Log In</button>
+            <button onClick={() => { setGoToLogin(true); }} type="submit">Log In</button>
         </form>
         <button className="link-btn" onClick={() => { setGoToLogin(true); }}>Already have an account? Login here.</button>
     </div>
