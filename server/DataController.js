@@ -16,11 +16,9 @@ module.exports = {
         try{
             const cursor = await collection.find(findQuery);
             await cursor.forEach(college => {
-                console.log(`${college.Name}: `);
-                console.log(`Location: ${college.City}, ${college.State}`);
-                console.log(`National Ranking: ${college.USNews_Rank}`);
-                console.log(`State Ranking: ${college.State_Rank}`);
-              });
+                // TODO: Return this as a response...
+                console.log(JSON.stringify(college));
+            });
     
         } catch (err){
             console.error(`Something went wrong trying to find the documents: ${err}\n`);
