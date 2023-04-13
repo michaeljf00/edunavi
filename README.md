@@ -68,3 +68,25 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+# Set-up Backend Server
+
+## Requirements
+* NodeJS 18.16.0 is installed. 
+
+To install all of the dependencies needed to run the backend server, run this commant from the project root directory:
+
+`npm install`
+
+
+To run the server, navigate to the backend server's directory within the project: 
+
+`cd server`
+
+To start the server, simply run:
+`node App.js`
+
+## Access to MongoDB 
+If you are a new developer, you will need to get access to EduNavi's database. Once you accept the invitation from the database, 
+you should be able to see EduNavi's database.
