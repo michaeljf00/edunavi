@@ -1,6 +1,6 @@
 const http = require("http");
 const express = require("express");
-var DataController = require("./DataController");
+var APIController = require("./APIController");
 
 const host = 'localhost';
 const port = 8000;
@@ -10,25 +10,29 @@ const server = express();
 
 // getLogin
 // TODO: Add functionality
-server.get("/login/:username", (req, res) => {
+server.get("/login/:username", async (req, res) => {
     res.json({valid: true});
 });
 
 // postRegister
 // TODO: Add functionality
-server.get("/register", (req, res) => {
+server.post("/register", async (req, res) => {
     res.json({valid : true});
 })
 
-// 
-server.get("/findcollege/:name", (req, res) => {
-    console.log(req.params.name);
-    console.log(DataController.findCollege("Rensselaer Polytechnic Institute").catch(console.dir));
-    res.json({message: "Hello"});
+// collegesReq 
+server.get("/findcolleges/:name", async (req, res) => {
+    var resp = await APIController.getColleges(req.params.name);
+    res.json(resp);
+});
+
+// collegeReq
+server.get("/getcollege/:collegeID", async (req, res) => {
+    var resp = await APIController.getCollege(req.params.collegeID);
+    res.json(resp);
 });
 
 
 server.listen(port, host, () => {
-    DataController.findCollege("Rensselaer Polytechnic Institute").catch(console.dir);
     console.log(`Server is running on http://${host}:${port}`);
 });
