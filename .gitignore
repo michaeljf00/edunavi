@@ -12,7 +12,7 @@
 /build
 
 # private keys
-/server/Keys.js
+/server/controllers/Keys.js
 
 # misc
 .DS_Store

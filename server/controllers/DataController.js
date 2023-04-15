@@ -7,7 +7,6 @@ const client = new MongoClient(Keys.getMongoClientKey());
 //       appropriate response object (less code to look through).
 module.exports = {
 
-    
     /**
      * Runs a query to MongoDB to retrieve all colleges 
      * with that college name. 
@@ -47,7 +46,7 @@ module.exports = {
     /**
      * Runs a query to MongoDB to retrieve the college with
      * the specified college id. 
-     * @param {Number} The college's id number
+     * @param {String} The college's id number
      * @returns { JSON } A JSON object of the college. See 
      * ./model/README.md for the expected structure of the JSON objects.        
      */
