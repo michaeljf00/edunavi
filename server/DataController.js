@@ -1,13 +1,22 @@
 const { MongoClient } = require('mongodb');
 var Keys = require('./Keys');
 
-// TODO: remove plain-text username and password from here...
 const client = new MongoClient(Keys.getMongoClientKey());
 
+// TODO: Make a private function that will execute a query and return an 
+//       appropriate response object (less code to look through).
 module.exports = {
-    // Finds the college with the given college name
+
+    
+    /**
+     * Runs a query to MongoDB to retrieve all colleges 
+     * with that college name. 
+     * @param {string} The exact name of the college.
+     * @returns { JSON } A JSON object that contains a list 
+     * of every colleges found. See ./model/README.md for the
+     * expected structure of the JSON objects.        
+     */
     findColleges : async function(collegeName) {
-        // Initiates the response object:
         var collegesList = [];
         const dbName = "EduNavi";
         const collectionName = "College";
@@ -35,6 +44,13 @@ module.exports = {
         return resp;
     },
 
+    /**
+     * Runs a query to MongoDB to retrieve the college with
+     * the specified college id. 
+     * @param {Number} The college's id number
+     * @returns { JSON } A JSON object of the college. See 
+     * ./model/README.md for the expected structure of the JSON objects.        
+     */
     findCollege : async function(id) {
         // Initiates the response object:
         var resp = {};
@@ -57,6 +73,13 @@ module.exports = {
         return resp;
     },
 
+    /**
+     * Runs a query to MongoDB to retrieve the course with
+     * the specified course id. 
+     * @param {String} The course's id number
+     * @returns { JSON } A JSON object of the course. See 
+     * ./model/README.md for the expected structure of the JSON objects.        
+     */
     getCourse : async function (courseID) {
         // Initiates the response object:
         var resp = {};
@@ -79,6 +102,16 @@ module.exports = {
         return resp;
     },
 
+    /**
+     * Runs a query to MongoDB to retrieve all courses associated 
+     * with a college and program.
+     * @param {String} The college's id number
+     * @param {String} The program number (see ./model/README.md) for
+     * more information regarding the types of programs.
+     * @returns { JSON } A JSON object containing a list of all courses
+     * associated with the given college and program. See ./model/README.md 
+     * for the expected structure of the JSON objects.        
+     */
     getCourses : async function (collegeID, programID){
         // Initiates the response object:
         var courseList = [];

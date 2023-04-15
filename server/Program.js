@@ -18,7 +18,7 @@ server.get("/login/:username", async (req, res) => {
 // TODO: Add functionality
 server.post("/register", async (req, res) => {
     res.json({valid : true});
-})
+});
 
 // collegesReq 
 server.get("/findcolleges/:name", async (req, res) => {
@@ -49,7 +49,6 @@ server.get("/ratemychance", async (req, res) => {
     var resp = await APIController.getMyChance();
     res.json(resp);
 });
-
 
 server.listen(port, host, () => {
     console.log(`Server is running on http://${host}:${port}`);

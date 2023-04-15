@@ -3,9 +3,19 @@ var ChanceCalculator = require("./model/RateMyChances");
 
 module.exports = {
 
-    // TODO: Implement these...
-    getLogin : async function (username) {},
-    postRegister : async function () {},
+    /**
+     * 
+     * @param {String} username 
+     */
+    login : async function (username) {
+        // TODO: Add implementation
+        return { valid : true }
+    },
+
+    register : async function () {
+        // TODO: Add implementation
+        return { successful : true }
+    },
 
     getColleges : async function(collegeName) {
         return DataController.findColleges(collegeName);

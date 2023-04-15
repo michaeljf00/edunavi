@@ -2,9 +2,13 @@ var AppController = require("./AppController");
 
 module.exports = {
 
-    // TODO: Implement these in backend...
-    getLogin : async function(username) {},
-    postRegister : async function () {},
+    getLogin : async function(username) {
+        return AppController.login(username);
+    },
+
+    postRegister : async function () {
+        return AppController.register();
+    },
 
     // TODO: Add this to AppController...
     getColleges : async function(collegeName){
