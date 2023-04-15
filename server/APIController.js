@@ -21,6 +21,10 @@ module.exports = {
 
     getCourses : async function(collegeID, programID) {
         return AppController.getCourses(collegeID, programID);
+    },
+
+    getMyChance : async function(){
+        return AppController.getMyChance();
     }
 
 }

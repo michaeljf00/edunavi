@@ -1,4 +1,5 @@
 var DataController = require("./DataController");
+var ChanceCalculator = require("./model/RateMyChances");
 
 module.exports = {
 
@@ -20,5 +21,9 @@ module.exports = {
 
     getCourses : async function(collegeID, programID) {
         return DataController.getCourses(collegeID, programID);
+    },
+
+    getMyChance : async function() {
+        return ChanceCalculator.rateMyChance();
     }
 }

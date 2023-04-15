@@ -44,6 +44,12 @@ server.get("/getcourses/:collegeID/:programID", async (req, res) => {
     res.json(resp);
 });
 
+// ratemychance
+server.get("/ratemychance", async (req, res) => {
+    var resp = await APIController.getMyChance();
+    res.json(resp);
+});
+
 
 server.listen(port, host, () => {
     console.log(`Server is running on http://${host}:${port}`);
