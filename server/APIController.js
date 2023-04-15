@@ -14,7 +14,13 @@ module.exports = {
     getCollege : async function(collegeID) {
         return AppController.getCollege(collegeID);
     },
-    
-    getCourse : async function(courseID) {}
+
+    getCourse : async function(courseID) {
+        return AppController.getCourse(courseID);
+    },
+
+    getCourses : async function(collegeID, programID) {
+        return AppController.getCourses(collegeID, programID);
+    }
 
 }
