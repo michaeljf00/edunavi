@@ -11,6 +11,9 @@
 # production
 /build
 
+# private keys
+/server/controllers/Keys.js
+
 # misc
 .DS_Store
 .env.local
