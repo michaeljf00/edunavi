@@ -1,0 +1,70 @@
+{
+    "undergraduate": [
+        {
+            "id": "1",
+            "name": "Computer Science",
+            "description": "Course 1 description"
+        },
+        {
+            "id": "2",
+            "name": "Mathematics",
+            "description": "Course 2 description"
+        },
+        {
+            "id": "3",
+            "name": "Information System",
+            "description": "Course 3 description"
+        },
+        {
+            "id": "4",
+            "name": "Human-Computer Interaction",
+            "description": "Course 4 description"
+        }
+    ],
+    "graduate": [
+        {
+            "id": "5",
+            "name": "Computer Science",
+            "description": "Course 5 description"
+        },
+        {
+            "id": "6",
+            "name": "Course 4",
+            "description": "Course 6 description"
+        },
+        {
+            "id": "7",
+            "name": "Computer Science",
+            "description": "Course 3 description"
+        },
+        {
+            "id": "8",
+            "name": "Course 4",
+            "description": "Course 4 description"
+        }
+    ],
+    "phd": [
+        {
+            "id": "9",
+            "name": "Computer Science",
+            "description": "Course 5 description"
+        },
+        {
+            "id": "10",
+            "name": "Course 6",
+            "description": "Course 6 description"
+        }
+    ],
+    "trans": [
+        {
+            "id": "11",
+            "name": "Computer Science",
+            "description": "Course 5 description"
+        },
+        {
+            "id": "12",
+            "name": "Course 8",
+            "description": "Course 6 description"
+        }
+    ]
+}
