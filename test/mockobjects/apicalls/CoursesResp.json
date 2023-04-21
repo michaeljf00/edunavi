@@ -1,0 +1,22 @@
+{
+    "courses": [
+        {
+            "_id":"643724c69231764ce964901e",
+            "College_ID":1,
+            "Program_ID":1,
+            "Course_ID":1,
+            "Course":"Computer Science",
+            "About_Course":"Computer science is...",
+            "Admission_Requirement":"https://admissions.rpi.edu/undergraduate/apply"
+        },
+        {
+            "_id":"251324c69211764ce934901d",
+            "College_ID":1,
+            "Program_ID":1,
+            "Course_ID":2,
+            "Course":"Business Analytics",
+            "About_Course": "Business analytics is...",
+            "Admission_Requirement":"https://admissions.rpi.edu/undergraduate/apply"
+        }
+    ]
+}

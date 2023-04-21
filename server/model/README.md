@@ -28,10 +28,17 @@ Note: The password entered in this request should be encrypted accordingly.
     "password": "dklgnaasfjfb"
 }
 ```
+
+### RegisterResp
+```
+{
+    "valid": true
+}
+```
 ### CollegesReq
 ```
 {
-    "id": 1
+    "name": "Rensselaer Polytechnic Institute"
 }
 ```
 ### CollegesResp
@@ -129,7 +136,9 @@ Program: 1=Undergraduate, 2=Graduate, 3=PhD
 
 ### GetChanceReq
 ```
-{}
+{
+    "user_id": 2
+}
 ```
 
 ### GetChanceResp
