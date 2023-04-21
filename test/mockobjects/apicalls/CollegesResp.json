@@ -1,0 +1,30 @@
+{"colleges":[
+    {   
+        "_id":"643724939231764ce9649018",
+        "College_ID":1,
+        "Name":"Rensselaer Polytechnic Institute",
+        "USNews_Rank":51,
+        "City":"Troy",
+        "State":"NY",
+        "State_Rank":7,
+        "About_College":"This is a description.",
+        "Current_Student":7616,
+        "Admission_Deadline":"2023-01-05",
+        "Acceptance_Rate":0.57,"Avg_Annual_Cost":73391,"Application_Site":"https://admissions.rpi.edu/",
+        "Img_Path":"NULL\r"
+    },
+    {   
+        "_id":"643724939231764ce9649018",
+        "College_ID":2,
+        "Name":"Yale University",
+        "USNews_Rank":10,
+        "City":"New Haven",
+        "State":"CT",
+        "State_Rank":1,
+        "About_College":"This is a description.",
+        "Current_Student":10000,
+        "Admission_Deadline":"2023-01-05",
+        "Acceptance_Rate":0.10,"Avg_Annual_Cost":73391,"Application_Site":"https://www.yale.edu/admissions",
+        "Img_Path":"NULL\r"
+    }
+]}
