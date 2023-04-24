@@ -1,9 +1,16 @@
 import React, { useState } from "react";
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
+import { Home } from "./Home";
 import './ProfileSettings.css';
 
 export const ProfileSettings = (props) => {
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    }
+
+    const [goToHome, setGoToHome] = React.useState(false);
     // Under-Grad Measurements
     const [hsgpa, setHSGPA] = useState('');
     const [sat, setSAT] = useState('');
@@ -27,6 +34,9 @@ export const ProfileSettings = (props) => {
         }
         document.getElementById("undergradBtn").style.display = "none";
         document.getElementById("postgradBtn").style.display = "none";
+        document.getElementById("dropdown-basic-button").style.display = "none";
+        document.getElementById("query").style.display="none";
+        
     }
 
     function isStudentInternational(international){
@@ -38,17 +48,17 @@ export const ProfileSettings = (props) => {
             document.getElementById("toefl-section").style.display = "none";
         }
     }
-    
-    const handleSubmit = (e) => {
-        console.log("Hello");
+    if (goToHome) {
+        return <Home />;
     }
-    
+
+
     return (
         <div className="auth-form-container">
             <h2>Profile Settings</h2>
-            <h4> How will you be applying to schools?</h4>
+            <h4 id = "query"> How will you be applying to schools?</h4>
             <div className = "dropdown">
-                <DropdownButton id="dropdown-basic-button" title="Type of Student">
+                <DropdownButton id="dropdown-basic-button" title="Type of Student" >
                     <Dropdown.Item id = "undergradBtn" className = "dropdown-btn" onClick = {() => profileType('undergrad')}>As an undergraduate</Dropdown.Item>
                     <Dropdown.Item id = "postgradBtn" className = "dropdown-btn" onClick = {() => profileType('postgrad')}>As a graduate</Dropdown.Item>
                 </DropdownButton>
@@ -61,7 +71,7 @@ export const ProfileSettings = (props) => {
                 <input value={sat} onChange={(e) => setSAT(e.target.value)} type="sat" placeholder="e.g. 1400" id="sat" name="sat" />
                 <label htmlFor="act">ACT Cumulative Score: </label>
                 <input value={act} onChange={(e) => setACT(e.target.value)} type="act" placeholder="e.g. 32" id="act" name="act" />
-                <button type="submit">Submit Info</button>
+                <button type="submit" onClick = {() => { setGoToHome(true); }}>Submit Info</button>
             </form>
 
             <form id = "postgrad-form" className="profile-settings-form" onSubmit={handleSubmit}>
@@ -77,7 +87,7 @@ export const ProfileSettings = (props) => {
                     <label htmlFor="toefl">TOEFL Score: </label>
                     <input value={toefl} onChange={(e) => setTOEFL(e.target.value)} type="toefl" placeholder="XXX" id="toefl" name="toefl" />
                 </div>
-                <button type="submit">Submit Info</button>
+                <button type="submit" onClick = {() => { setGoToHome(true); }}>Submit Info</button>
             </form>            
 
         </div>
