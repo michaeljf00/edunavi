@@ -5,6 +5,7 @@ import qsworld from './Assets/QSworld.png';
 import times from './Assets/Times.png';
 import { ProfileSettings } from './ProfileSettings';
 import { Login } from './Login';
+import searchbutton from './right-arrow.png';
 import "./Home.css";
 
 export const Home = () => {
@@ -41,7 +42,7 @@ export const Home = () => {
                     <div class="h-search-form" style={{'padding-bottom' : '50px'}} />
                         <form action="#">
                             <input type="search" name="search" placeholder="learn about your dream school now" />
-                            <button><ion-icon name="search-outline"></ion-icon></button>
+                            <button id="search-btn"><img id="search-img" src={searchbutton} alt="React Image" /></button>
                         </form>
                     <div/>
                 </section>
@@ -53,19 +54,19 @@ export const Home = () => {
                                 <img src={ usnews } class="card-img-top" alt="USNews" />
                                 <div class="card-body">
                                     <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">Cras justo odd
+                                        <li class="list-group-item">Princeton University
                                         </li>
                                         <li class="list-group-item">
-                                            Dapibus ac facilisis in
+                                            Massachusetts Institute of Technology
                                         </li>
                                         <li class="list-group-item">
-                                            Vestibulum at eros
+                                            Harvard University
                                         </li>
                                         <li class="list-group-item">
-                                            Vestibulum at eros
+                                            Stanford University
                                         </li>
                                         <li class="list-group-item">
-                                            Vestibulum at eros
+                                            Yale University
                                         </li>
                                     </ul>
                                 </div>
@@ -76,11 +77,11 @@ export const Home = () => {
                                 <img src={ qsworld } class="card-img-top" alt="QSWorld" />
                                 <div class="card-body">
                                     <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">Cras justo odi</li>
-                                        <li class="list-group-item">Dapibus ac facilisis in</li>
-                                        <li class="list-group-item">Vestibulum at eros</li>
-                                        <li class="list-group-item">Vestibulum at eros</li>
-                                        <li class="list-group-item">Vestibulum at eros</li>
+                                        <li class="list-group-item">Massachusetts Institute of Technology (MIT)</li>
+                                        <li class="list-group-item">University of Cambridge</li>
+                                        <li class="list-group-item">Stanford University</li>
+                                        <li class="list-group-item">University of Oxford</li>
+                                        <li class="list-group-item">Harvard University</li>
                                     </ul>
                                 </div>
                             </div>
@@ -90,11 +91,11 @@ export const Home = () => {
                                 <img src={ times } class="card-img-top" alt="Times" />
                                 <div class="card-body">
                                     <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">Cras justo odio</li>
-                                        <li class="list-group-item">Dapibus ac facilisis in</li>
-                                        <li class="list-group-item">Vestibulum at eros</li>
-                                        <li class="list-group-item">Cras justo odio</li>
-                                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                                        <li class="list-group-item">University of Oxford</li>
+                                        <li class="list-group-item">Harvard University</li>
+                                        <li class="list-group-item">University of Cambridge</li>
+                                        <li class="list-group-item">Stanford University</li>
+                                        <li class="list-group-item">Massachusetts Institute of Technology</li>
                                     </ul>
                                 </div>
                             </div>

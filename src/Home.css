@@ -86,7 +86,7 @@
 .list-group-item {
     border-radius: 100px;
     background: #0A4768;
-    color: white;
+    color: black;
 }
 
 .profile-settings-btn {
@@ -100,3 +100,12 @@
     color: white;
     text-decoration: underline;
 } 
+
+#search-img {
+    width: 40px;
+    height:40px;
+
+}
+#search-btn {
+    background: none;
+}
