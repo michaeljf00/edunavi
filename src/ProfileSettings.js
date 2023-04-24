@@ -25,6 +25,8 @@ export const ProfileSettings = (props) => {
             document.getElementById("undergrad-form").style.display = "none";
             document.getElementById("postgrad-form").style.display="flex";
         }
+        document.getElementById("undergradBtn").style.display = "none";
+        document.getElementById("postgradBtn").style.display = "none";
     }
 
     function isStudentInternational(international){
@@ -40,15 +42,15 @@ export const ProfileSettings = (props) => {
     const handleSubmit = (e) => {
         console.log("Hello");
     }
-
+    
     return (
         <div className="auth-form-container">
             <h2>Profile Settings</h2>
             <h4> How will you be applying to schools?</h4>
             <div className = "dropdown">
                 <DropdownButton id="dropdown-basic-button" title="Type of Student">
-                    <Dropdown.Item className = "dropdown-btn" onClick = {() => profileType('undergrad')}>As an undergraduate</Dropdown.Item>
-                    <Dropdown.Item className = "dropdown-btn" onClick = {() => profileType('postgrad')}>As a graduate</Dropdown.Item>
+                    <Dropdown.Item id = "undergradBtn" className = "dropdown-btn" onClick = {() => profileType('undergrad')}>As an undergraduate</Dropdown.Item>
+                    <Dropdown.Item id = "postgradBtn" className = "dropdown-btn" onClick = {() => profileType('postgrad')}>As a graduate</Dropdown.Item>
                 </DropdownButton>
             </div> 
 

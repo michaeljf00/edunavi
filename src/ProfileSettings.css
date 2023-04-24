@@ -1,5 +1,22 @@
+
+
 .profile-settings-form {
-    display:none; /* Default display prior to profile type selection */
+    display: none;
+    flex-direction: column;
+}
+
+.dropdown{
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-btn{
+    border: none;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #7439db;
 }
 
 #toefl-section {
