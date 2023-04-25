@@ -1,3 +1,4 @@
+const Test = require('./Test');
 /**
  * Contains test-related information specific to 
  * the ACT test.
@@ -25,6 +26,7 @@ class ACT extends Test {
         pReading,
         pScience,
         pWriting){
+            super();
             this.#scaledScore = pScaledScore;
             this.#math = pMath;
             this.#english = pEnglish;
@@ -112,3 +114,5 @@ class ACT extends Test {
         return false;
     }
 }
+
+module.exports = ACT;

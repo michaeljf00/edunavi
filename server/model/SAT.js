@@ -1,3 +1,4 @@
+const Test = require('./Test');
 /**
  * Contains test-related information specific to 
  * the SAT test.
@@ -13,6 +14,7 @@ class SAT extends Test {
      * @param {Integer} pReadingScore
      */
     constructor(pMathScore, pReadingScore){
+        super();
         this.#mathScore = pMathScore;
         this.#readingScore = pReadingScore;
     }
@@ -27,7 +29,7 @@ class SAT extends Test {
     /**
      * @returns The reading score assigned to this SAT instance.
      */
-    getWritingScore() {
+    getReadingScore() {
         return this.#readingScore;
     }
 
@@ -69,3 +71,5 @@ class SAT extends Test {
     }
 
 }
+
+module.exports = SAT;

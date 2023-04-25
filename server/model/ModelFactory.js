@@ -1,3 +1,9 @@
+const Test = require('./Test');
+const ACT = require('./ACT');
+const SAT = require('./SAT');
+const TOEFL = require('./TOEFL');
+const GRE = require('./GRE');
+const Student = require('./Student');
 /**
  * The ModelFactory is responsible for creating all instances of 
  * data module objects. 
@@ -63,3 +69,5 @@ class ModelFactory {
 
     }
 }
+
+module.exports=ModelFactory;

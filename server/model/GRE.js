@@ -1,3 +1,4 @@
+const Test = require('./Test');
 /**
  * Contains test-related information specific to 
  * the GRE exam.
@@ -18,6 +19,7 @@ class GRE extends Test {
         pVerbalScore,
         pWritingScore
     ){
+        super();
         this.#quantitativeScore = pQuantitativeScore;
         this.#verbalScore = pVerbalScore;
         this.#writingScore = pWritingScore;
@@ -81,3 +83,5 @@ class GRE extends Test {
         return false;
     }
 }
+
+module.exports = GRE;

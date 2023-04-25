@@ -1,3 +1,4 @@
+const Test = require('./Test');
 /**
  * A data module representing a Student (main type of user).
  */
@@ -20,10 +21,10 @@ class Student {
         pGPA,
         pTests
     ) {
-        email = pEmail;
-        fullName = pFullName;
-        gpa = pGPA;
-        tests = JSON.parse(JSON.stringify(pTests));
+        this.#email = pEmail;
+        this.#fullName = pFullName;
+        this.#gpa = pGPA;
+        this.#tests = JSON.parse(JSON.stringify(pTests));
     }
 
     /**
@@ -60,7 +61,8 @@ class Student {
      * the required tests to be apply as a postgraduate.
      */
     isPostGraduate(){
-        for (let i=0; i < this.#tests.length; i++){
+        var tests = this.#tests;
+        for (let i=0; i < tests.length; i++){
             if (tests[i].isPostGraduate()){
                 return true;
             }
@@ -73,7 +75,8 @@ class Student {
      * the required tests to be apply as an international student.
      */
     isInternational(){
-        for (let i=0; i < this.#tests.length; i++){
+        var tests = this.#tests;
+        for (let i=0; i < tests.length; i++){
             if (tests[i].isInternational()){
                 return true;
             }
@@ -82,3 +85,5 @@ class Student {
     }
     
 }
+
+module.exports = Student;
