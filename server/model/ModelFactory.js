@@ -42,6 +42,23 @@ class ModelFactory {
                     attributes.get("Reading")
                 );
                 break;
+            case "GRE":
+                return new GRE (
+                    attributes.get("Quantitative"),
+                    attributes.get("Verbal"),
+                    attributes.get("Writing")
+                );
+                break;
+            case "TOEFL":
+                return new TOEFL (
+                    attributes.get("Reading"),
+                    attributes.get("Writing"),
+                    attributes.get("Listening"),
+                    attributes.get("Speaking")
+                );
+                break;
+            default:
+                return null;
         }
 
     }

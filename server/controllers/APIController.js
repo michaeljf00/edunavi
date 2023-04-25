@@ -75,6 +75,21 @@ module.exports = {
     getMyChance : async function(){
         var resp = { chance: await AppController.getMyChance() }
         return resp;
+    },
+
+    /**
+     * Uses our updated rate-my-chance calculator to calculate the student's chance of acceptance.
+     * @param {Number} collegeAdmissionRate The acceptance rate of the college.
+     * @param {Number} gpa The unweighted GPA of the student (out of 4.0)
+     * @param {Number} testScore The student's best test score.
+     * @param {Number} topTestScore The highest cumulative value of the test provided.
+     * @returns A JSON object containing the student's chance of 
+     * acceptance. See See ../model/README.md to see the expected
+     * return object's structure.
+     */
+    getMyChanceStrict : async function(collegeAdmissionRate, gpa, testScore, topTestScore){
+        var resp = { chance: await AppController.getMyChanceStrict(collegeAdmissionRate, gpa, testScore, topTestScore) }
+        return resp;
     }
 
 }
