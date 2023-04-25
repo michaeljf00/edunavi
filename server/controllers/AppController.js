@@ -74,7 +74,19 @@ module.exports = {
      * @returns The probability of a student getting accepted.
      */
     getMyChance : async function() {
-        console.log(ChanceCalculator.rateMyChance());
         return await ChanceCalculator.rateMyChance();
+    },
+
+    /**
+     * Gets a student's chance of acceptance.
+     * @param {Number} collegeAdmissionRate The acceptance rate of the college.
+     * @param {Number} gpa The unweighted GPA of the student (out of 4.0)
+     * @param {Number} testScore The student's best test score.
+     * @param {Number} topTestScore The highest cumulative value of the test provided.
+     * @returns The probability of a student getting accepted.
+     */
+    getMyChanceStrict : async function(collegeAdmissionRate, gpa, testScore, topTestScore) {
+        return await ChanceCalculator.rateMyChanceV2(collegeAdmissionRate, gpa, testScore, topTestScore);
     }
+
 }

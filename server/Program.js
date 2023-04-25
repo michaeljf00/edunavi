@@ -68,6 +68,22 @@ server.get("/chance", async (req, res) => {
 });
 
 /**
+ * Handles GET CHANCE requests with extra details.
+ * @param {Number} collegeAdmissionRate The acceptance rate of the college.
+ * @param {Number} gpa The unweighted GPA of the student (out of 4.0)
+ * @param {Number} testScore The student's best test score.
+ * @param {Number} topTestScore The highest cumulative value of the test provided.
+ */
+server.get("/chance/:acceptanceRate/:gpa/:testscore/:toptestscore", async (req, res) => {
+    var resp = await APIController.getMyChanceStrict(
+        req.params.acceptanceRate, 
+        req.params.gpa,
+        req.params.testscore,
+        req.params.toptestscore);
+    res.json(resp);
+});
+
+/**
  * Starts the server...
  */
 server.listen(port, host, () => {
