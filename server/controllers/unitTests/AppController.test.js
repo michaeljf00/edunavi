@@ -23,3 +23,4 @@ test('AppController Get College Test', async () => {
     value = await AppController.getCollege(1);
     expect(value.College_ID).toBe(1);
 });
+

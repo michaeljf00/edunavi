@@ -1,9 +1,9 @@
 const Course = require("../Course");
 
 /**
- * Tests to ensure the college profile is used correctly.
+ * Tests to ensure the course is created correctly.
  */
-test('College Profile Results', async () => {
+test('Course Creation', async () => {
 
     var course = new Course(
         1,
