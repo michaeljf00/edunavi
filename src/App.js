@@ -10,6 +10,7 @@ function App() {
   const [currentPage, setCurrentPage] = useState('login');
   console.log(currentPage);
 
+
   return (
     <div className="App"> 
       <Router>
