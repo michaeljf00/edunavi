@@ -1,8 +1,0 @@
-.profile-settings-form {
-    display:none; /* Default display prior to profile type selection */
-}
-
-#toefl-section {
-    display: none; /* Default display prior to international status selection */
-    flex-direction: column;
-}
