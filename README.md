@@ -1,3 +1,14 @@
+# Coding Standards:
+
+All developed code associated with Edu Navi should follow the coding standards 
+specified by W3Schools. Code that doesn't adhere to these standards will not be 
+accepted in subsequent pull requests.
+
+Link to coding standards: https://www.w3schools.com/js/js_conventions.asp 
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -90,3 +101,4 @@ To start the server, simply run:
 ## Access to MongoDB 
 If you are a new developer, you will need to get access to EduNavi's database. Once you accept the invitation from the database, 
 you should be able to see EduNavi's database.
+
