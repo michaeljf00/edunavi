@@ -6,9 +6,11 @@
  * an inheritence by throwing an error if its base class is called.
  */
 class Test {
-    getCumulativeScore(){throw "Not Implemented"}
-    getTopScore() {throw "Not Implemented"}
-    getName() {throw "Not Implemented"}
-    isPostGraduate() {throw "Not Implemented"}
-    isIntenational() {throw "Not Implemented"}
+    constructor(){}
+    getCumulativeScore(){throw 'Not Implemented'}
+    getTopScore() {throw 'Not Implemented'}
+    getName() {throw 'Not Implemented'}
+    isPostGraduate() {throw 'Not Implemented'}
+    isIntenational() {throw 'Not Implemented'}
 }
+module.exports = Test;

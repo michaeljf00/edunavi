@@ -1,3 +1,4 @@
+const Test = require('./Test');
 /**
  * Contains test-related information specific to 
  * the TOEFL test.
@@ -20,10 +21,11 @@ class TOEFL extends Test {
         pWritingScore, 
         pListeningScore, 
         pSpeakingScore){
-        readingScore = pReadingScore;
-        writingScore = pWritingScore;
-        listeningScore = pListeningScore;
-        speakingScore = pSpeakingScore;
+        super();
+        this.#readingScore = pReadingScore;
+        this.#writingScore = pWritingScore;
+        this.#listeningScore = pListeningScore;
+        this.#speakingScore = pSpeakingScore;
     }
 
     /**
@@ -91,3 +93,5 @@ class TOEFL extends Test {
         return true;
     }
 }
+
+module.exports = TOEFL;

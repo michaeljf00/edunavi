@@ -27,8 +27,6 @@ module.exports = {
         try{
             const cursor = await collection.find(findQuery);
             await cursor.forEach(college => {
-                // TODO: Return this as a response...
-                console.log(college);
                 collegesList.push(JSON.parse(JSON.stringify(college)));
             });
     
@@ -39,7 +37,6 @@ module.exports = {
         var resp = {
             colleges: collegesList
         }
-        console.log(resp);
         return resp;
     },
 

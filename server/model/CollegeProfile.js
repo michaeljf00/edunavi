@@ -142,3 +142,5 @@ class CollegeProfile {
         return this.#imgPath;
     }
 }
+
+module.exports = CollegeProfile;
