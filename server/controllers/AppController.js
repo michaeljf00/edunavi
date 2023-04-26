@@ -1,3 +1,5 @@
+
+var UserAccounts = require("./UserAccounts")
 var DataController = require("./DataController");
 var ChanceCalculator = require("../model/RateMyChances");
 
@@ -11,7 +13,9 @@ module.exports = {
      */
     login : async function (email) {
         // TODO: Add implementation
-        return { valid : true }
+        /// Check if user is in databse
+        // If in database allow login and switch page
+        return UserAccounts.findUser(email);
     },
 
     /**
@@ -21,9 +25,8 @@ module.exports = {
      * @returns A JSON object indicating whether the 
      * registration process was successful.
      */
-    register : async function (studentProfile) {
-        // TODO: Add implementation
-        return { successful : true }
+    register : async function (name, userEmail, password) {
+        return UserAccounts.registerUser(name, userEmail, password);
     },
 
     /**
@@ -76,6 +79,7 @@ module.exports = {
     getMyChance : async function() {
         return await ChanceCalculator.rateMyChance();
     },
+
 
     /**
      * Gets a student's chance of acceptance.

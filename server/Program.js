@@ -1,4 +1,3 @@
-const http = require("http");
 const express = require("express");
 var APIController = require("./controllers/APIController");
 
@@ -15,8 +14,9 @@ const server = express();
  * Handles GET LOGIN requests.
  */
 // TODO: Add functionality
-server.get("/login/:username", async (req, res) => {
-    res.json({valid: true});
+server.get("/login/:userEmail", async (req, res) => {
+   var resp = await APIController.getLogin(req.params.userEmail);
+   res.json({response: resp["users"][0]});
 });
 
 /**
@@ -24,7 +24,8 @@ server.get("/login/:username", async (req, res) => {
  */
 // TODO: Add functionality
 server.post("/register", async (req, res) => {
-    res.json({valid : true});
+    var resp = await APIController.register('TestUser', 'testuser@yahoo.com', '2468101214');
+    res.json(resp);
 });
 
 /**
@@ -88,4 +89,13 @@ server.get("/chance/:acceptanceRate/:gpa/:testscore/:toptestscore", async (req, 
  */
 server.listen(port, host, () => {
     console.log(`Server is running on http://${host}:${port}`);
+});
+
+/**
+ * Handles GET USER requests
+ */
+
+server.get("/getusers/:userEmail", async (req, res) => {
+    var resp = await APIController.findUser(req.params.userEmail);
+    res.json(resp);
 });

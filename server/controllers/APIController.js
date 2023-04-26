@@ -8,8 +8,8 @@ module.exports = {
      * @returns A JSON object indicating whether the
      * user's email and password were correct.
      */
-    getLogin : async function(username) {
-        return AppController.login(username);
+    getLogin : async function(userEmail) {
+        return AppController.login(userEmail);
     },
 
     /**
@@ -19,8 +19,8 @@ module.exports = {
      * @returns A JSON object indicating whether the 
      * registration process was successful.
      */
-    postRegister : async function () {
-        return AppController.register();
+    register : async function (name, userEmail, password) {
+        return AppController.register(name, userEmail, password);
     },
 
     /**
@@ -90,6 +90,10 @@ module.exports = {
     getMyChanceStrict : async function(collegeAdmissionRate, gpa, testScore, topTestScore){
         var resp = { chance: await AppController.getMyChanceStrict(collegeAdmissionRate, gpa, testScore, topTestScore) }
         return resp;
+
     }
 
 }
+
+
+
