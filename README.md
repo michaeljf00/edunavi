@@ -96,7 +96,7 @@ To run the server, navigate to the backend server's directory within the project
 `cd server`
 
 To start the server, simply run:
-`node App.js`
+`node Program.js`
 
 ## Access to MongoDB 
 If you are a new developer, you will need to get access to EduNavi's database. Once you accept the invitation from the database, 
